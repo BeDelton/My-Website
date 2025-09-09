@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Project Results</title>
+    <meta name="description" content="Detailed results of a project" />
+    <style>
+        /* ===== THEME RESET ===== */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        body,
+        h1,
+        h2,
+        h3,
+        p {
+            margin: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+            line-height: 1.6;
+            background: radial-gradient(1200px 600px at 10% -20%, rgba(124, 92, 255, .2), transparent 70%),
+                radial-gradient(1000px 600px at 90% -10%, rgba(0, 200, 255, .15), transparent 70%),
+                linear-gradient(180deg, var(--bg, #0a0b10) 0%, #000 100%);
+            color: var(--text, #f1f3fa);
+        }
+
+        :root {
+            --bg: #0a0b10;
+            --panel: #141622;
+            --text: #f1f3fa;
+            --muted: #a3a9b9;
+            --brand: #7c5cff;
+            --brand2: #00c8ff;
+            --border: rgba(255, 255, 255, .08);
+            --radius: 16px;
+            --shadow: 0 10px 28px rgba(0, 0, 0, .35);
+        }
+
+        @media (prefers-color-scheme: light) {
+            :root {
+                --bg: #f8f9fb;
+                --panel: #ffffff;
+                --text: #12131a;
+                --muted: #555b68;
+                --brand: #5a43ff;
+                --brand2: #00a8e0;
+                --border: rgba(0, 0, 0, .08);
+                --shadow: 0 8px 24px rgba(0, 0, 0, .08);
+            }
+        }
+
+        .container {
+            max-width: 900px;
+            margin-inline: auto;
+            padding: 24px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 0 20px;
+        }
+
+        header h1 {
+            font-size: clamp(2rem, 2.5vw + 1rem, 3rem);
+            font-weight: 800;
+            line-height: 1.2;
+            background: linear-gradient(135deg, var(--brand), var(--brand2));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        header p {
+            margin-top: 10px;
+            color: var(--muted);
+            font-size: 1.1rem;
+        }
+
+        .results-card {
+            background: var(--panel);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 24px;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .results-card img {
+            max-width: 300px;
+            width: 100%;
+            height: auto;
+            margin: 0 auto;
+            display: block;
+            border-radius: var(--radius);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+        }
+
+        .results-card p {
+            margin-top: 18px;
+            color: var(--muted);
+        }
+
+        .actions {
+            margin-top: 28px;
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            text-decoration: none;
+            padding: 12px 18px;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+            font-weight: 600;
+            transition: background .25s ease, transform .2s ease;
+        }
+
+        .btn.primary {
+            background: linear-gradient(135deg, var(--brand), var(--brand2));
+            color: white;
+            border: none;
+        }
+
+        .btn.primary:hover {
+            transform: scale(1.04);
+        }
+
+        .btn.secondary {
+            color: var(--text);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            font-size: 0.95rem;
+            color: var(--muted);
+        }
+    </style>
+</head>
+
+<body>
+    <main class="container">
+        <header>
+            <h1>Project Results</h1>
+            <p>A deeper look at the outcome of my work.</p>
+        </header>
+
+        <section class="results-card">
+            <!-- Replace with your project image -->
+            <img src="images/QRIterative.png" alt="Project result image">
+
+            <p>
+                The goal of this paper was to discuss how parents height and other factors predict
+                a child's height. This was done using a QR Iterative algorithm to calculate the principal components of
+                a data set with the purpose of reducing the relationships between the variables we were examining.
+                I used a QR Decomposition instead of a Power Iteration because we are interested in more than one of
+                the eigenvalues. A Power Iteration converges at the most dominant eigenvalue and would need deflation to
+                calculate the others, whereas a QR Decomposition will give multiple prominent eigenvalues. There are
+                drawbacks with a QR Decomposition in that it is still highly costly and converges slowly.
+
+            </p>
+
+            <div class="actions">
+                <a href="index.html#projects" class="btn secondary">← Back to Projects</a>
+                <a href="https://github.com/BeDelton/DS310-Final/blob/main/Data%20Science%20Final%20Project/FinalProject.py"
+                    target="_blank" rel="noopener" class="btn primary">Source
+                    Code</a>
+                <a href="https://docs.google.com/document/d/1_xkmbBFhHYe0uSrjdgKhvX1FwsLt-W2ljMSDqj53Yio/edit?usp=sharing"
+                    target="_blank" rel="noopener" class="btn primary">See Full Report</a>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Ben Delton · Data Science & CyberSecurity</p>
+    </footer>
+</body>
+
+</html>
